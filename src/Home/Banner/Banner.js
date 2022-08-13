@@ -1,4 +1,7 @@
 import Img1 from "./../../Images/about-image.jpg";
+import React from "react";
+import ReactPlayer from "react-player";
+import Video from "./../../Images/video.mp4";
 
 function Banner() {
   return (
@@ -74,6 +77,49 @@ function Banner() {
           >
             Discover
           </a>
+        </div>
+      </div>
+      <div className="banner-video w-full">
+        <ReactPlayer
+          url={Video}
+          loop={true}
+          playing={true}
+          width="100%"
+          height="auto"
+        />
+      </div>
+      <div className="banner-contact grid lg:grid-cols-2 grid-cols-1 lg:px-20 px-5 py-28 gap-20">
+        <div className="banner-contact-content py-10">
+          <span className="text-red-600 text-sm">CONTACT INFO</span>
+          <h1 className="md:text-4xl text-xl">Get in Touch with Us</h1>
+          <div className="pl-2 border-l-2 border-red-600 my-10">
+            <div>
+              <span className="mr-5 text-red-600">Adress:</span>
+              <span>Berlin,Germany</span>
+            </div>
+            <div>
+              <span className="mr-5 text-red-600">Phone:</span>
+              <span>707-946-7464</span>
+            </div>
+            <div>
+              <span className="mr-5 text-red-600">Email:</span>
+              <span>info@yoursite.com</span>
+            </div>
+          </div>
+          <a
+            href=""
+            className="bg-black text-center py-4 text-white block w-40 hover:bg-gray-600"
+          >
+            Hakkımızda
+          </a>
+        </div>
+        <div className="banner-img">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48219.44090845358!2d29.120524067864544!3d40.94391175252063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac4336e39827f%3A0x608e0ae971e8ddc2!2sMaltepe%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1660432279312!5m2!1str!2str"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            style={{ width: "100%", height: "400px" }}
+          ></iframe>
         </div>
       </div>
     </>
