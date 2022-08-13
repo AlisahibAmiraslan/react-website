@@ -14,7 +14,6 @@ function Slider() {
     <div className="swiper-slider-home">
       <Swiper
         effect={"cube"}
-        grabCursor={true}
         loop={true}
         cubeEffect={{
           shadow: true,
@@ -24,9 +23,6 @@ function Slider() {
         }}
         modules={[EffectCube, Pagination, Navigation, Autoplay]}
         className="mySwiper"
-        pagination={{
-          clickable: true,
-        }}
         navigation={true}
         autoplay={{
           delay: 10000,
@@ -35,7 +31,7 @@ function Slider() {
         speed={2000}
       >
         <SwiperSlide>
-          <img src={Img1} />
+          <img src={Img1} alt="banner-slider" />
           <div className="slide-body-content absolute text-center">
             <h2 className="text-white md:text-4xl text-xl">
               Yatırım Danışmanlığı için Doğru Yerdesiniz
@@ -51,7 +47,7 @@ function Slider() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Img2} />
+          <img src={Img2} alt="banner-slider" />
           <div className="slide-body-content absolute text-center">
             <h2 className="text-white md:text-4xl text-xl">
               Yatırım Danışmanlığı için Doğru Yerdesiniz
@@ -67,7 +63,7 @@ function Slider() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Img3} />
+          <img src={Img3} alt="banner-slider" />
           <div className="slide-body-content absolute text-center">
             <h2 className="text-white md:text-4xl text-xl">
               Yatırım Danışmanlığı için Doğru Yerdesiniz
@@ -83,7 +79,7 @@ function Slider() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Img4} />
+          <img src={Img4} alt="banner-slider" />
           <div className="slide-body-content absolute text-center">
             <h2 className="text-white md:text-4xl text-xl">
               Yatırım Danışmanlığı için Doğru Yerdesiniz

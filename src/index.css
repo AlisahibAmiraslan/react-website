@@ -90,10 +90,19 @@ body {
 .swiper-button-prev {
   color: crimson !important;
 }
-.swiper-pagination-bullet {
-  background-color: crimson !important;
-}
 /* swiper */
+
+.banner-discover {
+  background: url("./Images/discover-image.jpg");
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+}
 
 @media only screen and (max-width: 1000px) {
   .nav-menu .nav-ul {
