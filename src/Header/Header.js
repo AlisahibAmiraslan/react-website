@@ -65,8 +65,7 @@ function Header() {
             <li>
               <a
                 href=""
-                className="contact-button text-white px-7 py-3 capitalize"
-                style={{ backgroundColor: "crimson" }}
+                className="contact-button text-white px-7 py-3 capitalize bg-red-600 hover:bg-red-500"
               >
                 İletişime Geç
               </a>

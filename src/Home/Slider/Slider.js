@@ -43,7 +43,7 @@ function Slider() {
             <div className="mt-10">
               <a
                 href="/"
-                className="bg-red-600 md:px-10 px-8 md:py-5 py-3 text-white"
+                className="bg-red-600 md:px-10 px-8 md:py-5 py-3 text-white hover:bg-red-500"
               >
                 Keşfet
               </a>
@@ -52,12 +52,51 @@ function Slider() {
         </SwiperSlide>
         <SwiperSlide>
           <img src={Img2} />
+          <div className="slide-body-content absolute text-center">
+            <h2 className="text-white md:text-4xl text-xl">
+              Yatırım Danışmanlığı için Doğru Yerdesiniz
+            </h2>
+            <div className="mt-10">
+              <a
+                href="/"
+                className="bg-red-600 md:px-10 px-8 md:py-5 py-3 text-white hover:bg-red-500"
+              >
+                Keşfet
+              </a>
+            </div>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img src={Img3} />
+          <div className="slide-body-content absolute text-center">
+            <h2 className="text-white md:text-4xl text-xl">
+              Yatırım Danışmanlığı için Doğru Yerdesiniz
+            </h2>
+            <div className="mt-10">
+              <a
+                href="/"
+                className="bg-red-600 md:px-10 px-8 md:py-5 py-3 text-white hover:bg-red-500"
+              >
+                Keşfet
+              </a>
+            </div>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img src={Img4} />
+          <div className="slide-body-content absolute text-center">
+            <h2 className="text-white md:text-4xl text-xl">
+              Yatırım Danışmanlığı için Doğru Yerdesiniz
+            </h2>
+            <div className="mt-10">
+              <a
+                href="/"
+                className="bg-red-600 md:px-10 px-8 md:py-5 py-3 text-white hover:bg-red-500"
+              >
+                Keşfet
+              </a>
+            </div>
+          </div>
         </SwiperSlide>
       </Swiper>
     </div>
