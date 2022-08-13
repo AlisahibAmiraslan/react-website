@@ -104,6 +104,26 @@ body {
   background-blend-mode: darken;
 }
 
+footer div a {
+  display: block;
+  padding: 10px 0;
+  transition: color 0.4s ease;
+}
+
+footer div a:hover {
+  color: crimson;
+}
+
+footer .social a:nth-child(1) {
+  margin-left: 0;
+}
+
+footer .social a {
+  display: inline-block;
+  margin-left: 30px;
+  font-size: 25px;
+}
+
 @media only screen and (max-width: 1000px) {
   .nav-menu .nav-ul {
     display: none;
