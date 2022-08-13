@@ -18,7 +18,7 @@ function Header() {
 
   return (
     <>
-      <header className="w-full fixed top-0 flex border-b">
+      <header className="w-full fixed top-0 flex border-b bg-white z-[100]">
         <nav className="nav-menu w-full lg:flex block">
           <div className="flex justify-between w-full lg:w-40">
             <div className="icons">
