@@ -1,13 +1,58 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;500;900&display=swap");
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Raleway", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.nav-menu .nav-ul li {
+  padding: 30px 10px;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: gray;
+}
+
+.nav-menu .nav-ul {
+  width: 100%;
+}
+
+.nav-menu .nav-ul li.active {
+  color: crimson;
+  font-weight: bolder;
+}
+
+.logo {
+  max-width: 170px;
+}
+
+.icons {
+  display: none;
+  padding: 25px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .nav-menu .nav-ul {
+    display: none;
+  }
+
+  .nav-ul.open {
+    display: block;
+  }
+
+  .nav-menu .nav-ul li {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .icons {
+    display: flex;
+  }
 }
