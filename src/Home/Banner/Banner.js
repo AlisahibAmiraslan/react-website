@@ -79,7 +79,7 @@ function Banner() {
           </a>
         </div>
       </div>
-      <div className="banner-video w-full">
+      <div className="banner-video w-full md:mt-0 mt-14">
         <ReactPlayer
           url={Video}
           loop={true}
@@ -107,7 +107,7 @@ function Banner() {
             </div>
           </div>
           <Link to="contact">
-            <span className="bg-black text-center py-4 text-white block w-40 hover:bg-gray-600">
+            <span className="bg-black text-center py-4 text-white block md:w-40 hover:bg-gray-600 w-full">
               Contact
             </span>
           </Link>
