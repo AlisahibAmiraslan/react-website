@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Logo from "../Images/logo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
@@ -42,10 +43,10 @@ function Header() {
           </div>
           <ul className="flex justify-end items-center nav-ul">
             <li className="menu active">
-              <a href="">AnaSayfa</a>
+              <Link to="/">AnaSayfa</Link>
             </li>
             <li className="menu">
-              <a href="">Hakkımızda</a>
+              <Link to="about">Hakkımızda</Link>
             </li>
             <li className="menu">
               <a href="">Projeler</a>

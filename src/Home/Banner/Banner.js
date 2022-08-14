@@ -2,6 +2,7 @@ import Img1 from "./../../Images/about-image.jpg";
 import React from "react";
 import ReactPlayer from "react-player";
 import Video from "./../../Images/video.mp4";
+import { Link } from "react-router-dom";
 
 function Banner() {
   return (
@@ -17,12 +18,11 @@ function Banner() {
             encompasses a broad range of businesses that manage money, including
             credit unions.
           </p>
-          <a
-            href=""
-            className="bg-black text-center py-4 text-white block w-40 hover:bg-gray-600"
-          >
-            Hakkımızda
-          </a>
+          <Link to="about">
+            <span className="bg-black text-center py-4 text-white block w-40 hover:bg-gray-600">
+              Hakkımızda
+            </span>
+          </Link>
         </div>
         <div className="banner-img">
           <img src={Img1} alt="about İmage" />
