@@ -36,9 +36,9 @@ function Header() {
               )}
             </div>
             <div className="logo p-5">
-              <a href="">
+              <Link to="/">
                 <img src={Logo} alt="our_logo" />
-              </a>
+              </Link>
             </div>
           </div>
           <ul className="flex justify-end items-center nav-ul">
