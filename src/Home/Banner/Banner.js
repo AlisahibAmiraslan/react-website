@@ -86,6 +86,14 @@ function Banner() {
           playing={true}
           width="100%"
           height="auto"
+          config={{
+            file: {
+              attributes: {
+                autoPlay: true,
+                muted: true,
+              },
+            },
+          }}
         />
       </div>
       <div className="banner-contact grid lg:grid-cols-2 grid-cols-1 lg:px-20 px-5 py-28 gap-20">
