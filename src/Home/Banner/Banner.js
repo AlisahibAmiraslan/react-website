@@ -42,7 +42,7 @@ function Banner() {
         </div>
         <div className="p-5">
           <h3 className="text-red-600 text-2xl mb-5 font-semibold">
-            Voluptate, voluptatibus eligendi
+            Voluptate voluptatibus eligendi
           </h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam
