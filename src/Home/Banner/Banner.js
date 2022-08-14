@@ -106,12 +106,11 @@ function Banner() {
               <span>info@yoursite.com</span>
             </div>
           </div>
-          <a
-            href=""
-            className="bg-black text-center py-4 text-white block w-40 hover:bg-gray-600"
-          >
-            Hakkımızda
-          </a>
+          <Link to="contact">
+            <span className="bg-black text-center py-4 text-white block w-40 hover:bg-gray-600">
+              Contact
+            </span>
+          </Link>
         </div>
         <div className="banner-map">
           <iframe

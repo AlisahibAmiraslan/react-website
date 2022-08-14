@@ -1,9 +1,35 @@
+import { useState, useEffect } from "react";
 import { BsInstagram, BsFacebook, BsTwitter } from "react-icons/bs";
+import { BiArrowToTop } from "react-icons/bi";
 
 function Footer() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <footer className="w-full grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 bg-gray-800 py-10">
+        {scrollPosition > 500 ? (
+          <div className="fixed bottom-10 right-3">
+            <a href="#top" className="text-red-600 top">
+              <BiArrowToTop className=" w-14 h-14" />
+            </a>
+          </div>
+        ) : (
+          ""
+        )}
         <div className="text-white p-5">
           <h3 className="text-red-600 text-2xl">Holding</h3>
           <div>
