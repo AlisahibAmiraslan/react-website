@@ -31,7 +31,7 @@ function Footer() {
           ""
         )}
         <div className="text-white p-5">
-          <h3 className="text-red-600 text-2xl">Holding</h3>
+          <h3 className="text-red-600 text-2xl mb-5">Holding</h3>
           <div>
             <a href="">Hakkımızda</a>
             <a href="">Biz Kimiz</a>
@@ -40,7 +40,7 @@ function Footer() {
           </div>
         </div>
         <div className="text-white p-5">
-          <h3 className="text-red-600 text-2xl">Our Company</h3>
+          <h3 className="text-red-600 text-2xl mb-5">Our Company</h3>
           <div>
             <a href="">Kurumsal Bilgiler</a>
             <a href="">Sosyal Sorumluluk</a>
@@ -49,7 +49,7 @@ function Footer() {
           </div>
         </div>
         <div className="text-white p-5">
-          <h3 className="text-red-600 text-2xl">Products</h3>
+          <h3 className="text-red-600 text-2xl mb-5">Products</h3>
           <div>
             <a href="">Özel Teklifler</a>
             <a href="">Kariyer</a>
@@ -58,7 +58,7 @@ function Footer() {
           </div>
         </div>
         <div className="text-white p-5">
-          <h3 className="text-red-600 text-2xl">Social Medya</h3>
+          <h3 className="text-red-600 text-2xl mb-5">Social Medya</h3>
           <div className="social">
             <a href="">
               <BsInstagram />
