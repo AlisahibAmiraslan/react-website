@@ -6,7 +6,7 @@ import Img1 from "./../Images/about-image.jpg";
 function About() {
   return (
     <>
-      <div className="about-banner-title w-full flex justify-center items-center mt-20">
+      <div className="banner-title w-full flex justify-center items-center mt-20">
         <div>
           <h1 className="text-7xl text-white mb-7">About</h1>
           <div className="flex">

@@ -61,7 +61,7 @@ function Header() {
               <a href="">Ekibimiz</a>
             </li>
             <li className="menu">
-              <a href="">İletişim</a>
+              <Link to="contact">İletişim</Link>
             </li>
             <li>
               <a

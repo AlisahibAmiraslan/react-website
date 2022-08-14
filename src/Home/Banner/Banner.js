@@ -113,7 +113,7 @@ function Banner() {
             Hakkımızda
           </a>
         </div>
-        <div className="banner-img">
+        <div className="banner-map">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48219.44090845358!2d29.120524067864544!3d40.94391175252063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac4336e39827f%3A0x608e0ae971e8ddc2!2sMaltepe%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1660432279312!5m2!1str!2str"
             loading="lazy"
