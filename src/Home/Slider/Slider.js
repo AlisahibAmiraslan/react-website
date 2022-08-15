@@ -33,7 +33,7 @@ function Slider() {
         <SwiperSlide>
           <img src={Img1} alt="banner-slider" />
           <div className="slide-body-content absolute text-center">
-            <h2 className="text-white md:text-4xl text-xl">
+            <h2 className="text-red-600 md:text-4xl text-xl">
               Yatırım Danışmanlığı için Doğru Yerdesiniz
             </h2>
             <div className="mt-10">
