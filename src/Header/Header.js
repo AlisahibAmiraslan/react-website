@@ -52,9 +52,6 @@ function Header() {
               <a href="">Projeler</a>
             </li>
             <li className="menu">
-              <a href="">Blog</a>
-            </li>
-            <li className="menu">
               <Link to="/question">Sıkca Sorulan Sorular</Link>
             </li>
             <li className="menu">
