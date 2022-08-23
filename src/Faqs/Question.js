@@ -13,6 +13,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
+import info from "./customer_info";
 
 function Question() {
   return (
@@ -47,47 +48,37 @@ function Question() {
         </div>
       </section>
       <section className="customer w-full">
-        <div className="w-1/2 mx-auto py-20">
+        <div className="md:w-1/2 mx-auto w-full">
           <Swiper
             spaceBetween={30}
+            grabCursor={true}
+            loop={true}
             pagination={{
               clickable: true,
             }}
             modules={[Pagination]}
-            className="mySwiper"
+            className="mySwiper py-20"
           >
-            <SwiperSlide>
-              <div className="customer-wrapper w-full flex justify-center items-center flex-col">
-                <div className="customer-img">
-                  <img
-                    src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387"
-                    alt="customer"
-                  />
-                </div>
-                <div className="customer-name">
-                  <h3>Anjorin Werner</h3>
-                </div>
-                <div className="customer-job">
-                  <span>Front-end</span>
-                </div>
-                <div className="customer-text">
-                  <p>
-                    This is the first item's accordion body. It is shown by
-                    default, until the collapse plugin adds the appropriate
-                    classes that we use to style each element.", job: "Web
-                    Developer
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
-            <SwiperSlide>Slide 5</SwiperSlide>
-            <SwiperSlide>Slide 6</SwiperSlide>
-            <SwiperSlide>Slide 7</SwiperSlide>
-            <SwiperSlide>Slide 8</SwiperSlide>
-            <SwiperSlide>Slide 9</SwiperSlide>
+            {info.map((info) => {
+              return (
+                <SwiperSlide key={info.id}>
+                  <div className="customer-wrapper w-full flex justify-center items-center flex-col">
+                    <div className="customer-img mb-10">
+                      <img src={info.img} alt="customer" />
+                    </div>
+                    <div className="customer-name md:text-2xl">
+                      <h3>{info.name}</h3>
+                    </div>
+                    <div className="customer-job text-red-600 text-xs">
+                      <span>{info.job}</span>
+                    </div>
+                    <div className="customer-text mt-10 text-center">
+                      <p>{info.text}</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
         </div>
       </section>

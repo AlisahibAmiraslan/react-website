@@ -71,12 +71,12 @@ function Banner() {
             rerum, itaque minus dolore porro quis animi ea architecto iure
             commodi. Fuga iure harum beatae?
           </p>
-          <a
-            href=""
+          <Link
+            to="/question"
             className="text-center py-4 text-white block w-40 bg-red-600 hover:bg-red-500"
           >
             Discover
-          </a>
+          </Link>
         </div>
       </div>
       <div className="banner-video w-full md:mt-0 mt-14">
