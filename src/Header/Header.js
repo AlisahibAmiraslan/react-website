@@ -17,9 +17,6 @@ function Header() {
       item.classList.add("active");
     });
   });
-  // useEffect(() => {
-
-  // }, [Router]);
 
   function menuOpen() {
     SetOpenMenu(true);
