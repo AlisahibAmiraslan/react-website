@@ -7,7 +7,7 @@ function About() {
   return (
     <>
       <div className="banner-title w-full flex justify-center items-center mt-20">
-        <div>
+        <div className="flex justify-center items-center flex-col">
           <h1 className="text-7xl text-white mb-7">About</h1>
           <div className="flex">
             <Link to="/">

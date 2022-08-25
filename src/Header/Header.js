@@ -49,7 +49,7 @@ function Header() {
               <Link to="/about">Hakkımızda</Link>
             </li>
             <li className="menu">
-              <a href="">Projeler</a>
+              <Link to="/projects">Projeler</Link>
             </li>
             <li className="menu">
               <Link to="/question">Sıkca Sorulan Sorular</Link>

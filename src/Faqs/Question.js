@@ -19,8 +19,8 @@ function Question() {
   return (
     <>
       <div className="banner-title w-full flex justify-center items-center mt-20">
-        <div>
-          <h1 className="text-7xl text-white mb-7">About</h1>
+        <div className="flex justify-center items-center flex-col">
+          <h1 className="text-7xl text-white mb-7">Question</h1>
           <div className="flex">
             <Link to="/">
               <span className="text-2xl text-red-600">HOME</span>

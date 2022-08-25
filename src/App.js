@@ -5,6 +5,7 @@ import Contact from "./Contact/Contact";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 import Home from "./Home/Home";
+import Projects from "./Projects/Projects";
 import Question from "./Faqs/Question";
 import { useLocation } from "react-router-dom";
 import "react-accessible-accordion/dist/fancy-example.css";
@@ -25,6 +26,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="question" element={<Question />} />
+        <Route path="projects" element={<Projects />} />
       </Routes>
       <Footer />
     </>
