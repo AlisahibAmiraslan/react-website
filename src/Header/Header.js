@@ -1,11 +1,25 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../Images/logo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 
 function Header() {
   const [openMenu, SetOpenMenu] = useState(false);
+
+  const Router = useLocation();
+  const nav = document.querySelector(".nav-ul");
+  const menu = document.querySelectorAll(".menu");
+
+  menu.forEach((item) => {
+    item.addEventListener("click", () => {
+      document.querySelector(".nav-ul .active").classList.remove("active");
+      item.classList.add("active");
+    });
+  });
+  // useEffect(() => {
+
+  // }, [Router]);
 
   function menuOpen() {
     SetOpenMenu(true);

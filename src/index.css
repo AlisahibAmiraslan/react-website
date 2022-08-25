@@ -42,7 +42,7 @@ body {
 
 .nav-menu .nav-ul li.active {
   color: crimson;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 .logo {
