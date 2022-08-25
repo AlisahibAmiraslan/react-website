@@ -11,12 +11,18 @@ function Header() {
   const nav = document.querySelector(".nav-ul");
   const menu = document.querySelectorAll(".menu");
 
-  menu.forEach((item) => {
-    item.addEventListener("click", () => {
-      document.querySelector(".nav-ul .active").classList.remove("active");
-      item.classList.add("active");
+  function activeMenu() {
+    menu.forEach((item) => {
+      item.addEventListener("click", () => {
+        document.querySelector(".nav-ul .active").classList.remove("active");
+        item.classList.add("active");
+      });
     });
-  });
+  }
+
+  useEffect(() => {
+    activeMenu();
+  }, [Router]);
 
   function menuOpen() {
     SetOpenMenu(true);
