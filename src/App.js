@@ -7,6 +7,7 @@ import Header from "./Header/Header";
 import Home from "./Home/Home";
 import Projects from "./Projects/Projects";
 import Question from "./Faqs/Question";
+import ProjectDesc from "./Projects/ProjectDesc";
 import { useLocation } from "react-router-dom";
 import "react-accessible-accordion/dist/fancy-example.css";
 import "swiper/css/bundle";
@@ -27,6 +28,7 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="question" element={<Question />} />
         <Route path="projects" element={<Projects />} />
+        <Route path="project_desc" element={<ProjectDesc />} />
       </Routes>
       <Footer />
     </>
