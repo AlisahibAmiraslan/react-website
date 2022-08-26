@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import About from "./About/About";
 import Contact from "./Contact/Contact";
@@ -15,24 +15,46 @@ import "swiper/css/bundle";
 
 function App() {
   const location = useLocation();
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
+  const [progress, setProgress] = useState(false);
+
+  function getScroll() {
+    setProgress(true);
+    setTimeout(() => {
+      setProgress(false);
+    }, 2000);
+  }
+
+  useEffect(() => {
+    window.addEventListener("load", getScroll);
+
+    return () => {
+      window.removeEventListener("laod", getScroll);
+    };
+  }, [location]);
+
   return (
     <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="question" element={<Question />} />
-        <Route path="projects" element={<Projects />} />
-        <Route path="project_desc" element={<ProjectDesc />} />
-        <Route path="team" element={<Team />} />
-      </Routes>
-      <Footer />
+      {progress ? (
+        <div className="loading">laoding...</div>
+      ) : (
+        <>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="question" element={<Question />} />
+            <Route path="projects" element={<Projects />} />
+            <Route path="project_desc" element={<ProjectDesc />} />
+            <Route path="team" element={<Team />} />
+          </Routes>
+          <Footer />
+        </>
+      )}
     </>
   );
 }
