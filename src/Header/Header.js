@@ -8,21 +8,6 @@ function Header() {
   const [openMenu, SetOpenMenu] = useState(false);
 
   const Router = useLocation();
-  const nav = document.querySelector(".nav-ul");
-  const menu = document.querySelectorAll(".menu");
-
-  function activeMenu() {
-    menu.forEach((item) => {
-      item.addEventListener("click", () => {
-        document.querySelector(".nav-ul .active").classList.remove("active");
-        item.classList.add("active");
-      });
-    });
-  }
-
-  useEffect(() => {
-    activeMenu();
-  }, [Router]);
 
   function menuOpen() {
     SetOpenMenu(true);
@@ -59,7 +44,7 @@ function Header() {
             </div>
           </div>
           <ul className="flex justify-end items-center nav-ul">
-            <li className="menu active">
+            <li className="menu">
               <Link to="/">AnaSayfa</Link>
             </li>
             <li className="menu">
