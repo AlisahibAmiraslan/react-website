@@ -10,7 +10,7 @@ function Projects() {
         <div className="flex justify-center items-center flex-col">
           <h1 className="text-7xl text-white mb-7">Projects</h1>
           <div className="flex">
-            <Link to="/project_desc">
+            <Link to="/">
               <span className="text-2xl text-red-600">HOME</span>
             </Link>
             <AiOutlineRight className="text-white mx-5 w-6 h-6" />
