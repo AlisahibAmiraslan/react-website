@@ -72,14 +72,14 @@ function Header() {
               <Link to="/question">Sıkca Sorulan Sorular</Link>
             </li>
             <li className="menu">
-              <a href="">Ekibimiz</a>
+              <Link to="/team">Ekibimiz</Link>
             </li>
             <li className="menu">
               <Link to="/contact">İletişim</Link>
             </li>
             <li>
               <a
-                href=""
+                href="#"
                 className="contact-button text-white px-7 py-3 capitalize bg-red-600 hover:bg-red-500"
               >
                 İletişime Geç

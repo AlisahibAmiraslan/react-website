@@ -214,6 +214,31 @@ footer .social a {
   filter: brightness(0.8);
 }
 
+/* team */
+
+.team-content {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.team-content :where(div.team-about, div.team-image) {
+  width: 50%;
+}
+
+.team-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.3s;
+  cursor: pointer;
+  border-radius: 10px 0 0 10px;
+}
+
+.team-image img:hover {
+  filter: brightness(0.6);
+}
+
 @media only screen and (max-width: 1000px) {
   .nav-menu .nav-ul {
     display: none;
@@ -254,5 +279,12 @@ footer .social a {
 
   .accordion__panel {
     font-size: 14px;
+  }
+
+  .team-content :where(div.team-about, div.team-image) {
+    width: 100%;
+  }
+  .team-image img {
+    border-radius: 10px 10px 10px 10px;
   }
 }
