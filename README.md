@@ -2,4 +2,5 @@
 
 https://newreactwebsite.netlify.app/
 
-it is not ready yet. SOON
+Style is preferable. It is just example 
+
