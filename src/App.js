@@ -12,51 +12,59 @@ import Team from "./Team/Team";
 import { useLocation } from "react-router-dom";
 import "react-accessible-accordion/dist/fancy-example.css";
 import "swiper/css/bundle";
+import Loader from "./Loader/loader";
 
 function App() {
-  const location = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location]);
+	const location = useLocation();
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [location]);
 
-  const [progress, setProgress] = useState(false);
+	// if you want to loading scroll animation
+	// const [progress, setProgress] = useState(false);
 
-  function getScroll() {
-    setProgress(true);
-    setTimeout(() => {
-      setProgress(false);
-    }, 2000);
-  }
+	// function getScroll() {
+	//   setProgress(true);
+	//   setTimeout(() => {
+	//     setProgress(false);
+	//   }, 2000);
+	// }
 
-  useEffect(() => {
-    window.addEventListener("load", getScroll);
+	// useEffect(() => {
+	//   window.addEventListener("load", getScroll);
 
-    return () => {
-      window.removeEventListener("laod", getScroll);
-    };
-  }, [location]);
+	//   return () => {
+	//     window.removeEventListener("laod", getScroll);
+	//   };
+	// }, [location]);
 
-  return (
-    <>
-      {progress ? (
-        <div className="loading">laoding...</div>
-      ) : (
-        <>
-          <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="about" element={<About />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="question" element={<Question />} />
-            <Route path="projects" element={<Projects />} />
-            <Route path="project_desc" element={<ProjectDesc />} />
-            <Route path="team" element={<Team />} />
-          </Routes>
-          <Footer />
-        </>
-      )}
-    </>
-  );
+	const [loadingSkeleton, setLoadingSkeleton] = useState(true);
+
+	setTimeout(() => {
+		setLoadingSkeleton(false);
+	}, 2000);
+
+	return (
+		<>
+			{loadingSkeleton ? (
+				<Loader />
+			) : (
+				<>
+					<Header />
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route path="about" element={<About />} />
+						<Route path="contact" element={<Contact />} />
+						<Route path="question" element={<Question />} />
+						<Route path="projects" element={<Projects />} />
+						<Route path="project_desc" element={<ProjectDesc />} />
+						<Route path="team" element={<Team />} />
+					</Routes>
+					<Footer />
+				</>
+			)}
+		</>
+	);
 }
 
 export default App;
