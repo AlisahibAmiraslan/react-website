@@ -48,7 +48,7 @@ function Header() {
 							<Link to="/">AnaSayfa</Link>
 						</li>
 						<li className="menu">
-							<a href="/about">Hakkımızda</a>
+							<a href="about">Hakkımızda</a>
 						</li>
 						<li className="menu">
 							<Link to="/projects">Projeler</Link>
