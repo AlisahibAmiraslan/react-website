@@ -21,48 +21,48 @@ function App() {
 	}, [location]);
 
 	// if you want to loading scroll animation
-	// const [progress, setProgress] = useState(false);
+	const [progress, setProgress] = useState(false);
 
-	// function getScroll() {
-	//   setProgress(true);
-	//   setTimeout(() => {
-	//     setProgress(false);
-	//   }, 2000);
-	// }
+	function getScroll() {
+		setProgress(true);
+		setTimeout(() => {
+			setProgress(false);
+			setLoadingSkeleton(false);
+		}, 1000);
+	}
 
-	// useEffect(() => {
-	//   window.addEventListener("load", getScroll);
+	useEffect(() => {
+		window.addEventListener("load", getScroll);
 
-	//   return () => {
-	//     window.removeEventListener("laod", getScroll);
-	//   };
-	// }, [location]);
+		return () => {
+			window.removeEventListener("laod", getScroll);
+		};
+	}, [location]);
 
+	// skeleton use
 	const [loadingSkeleton, setLoadingSkeleton] = useState(true);
-
-	setTimeout(() => {
-		setLoadingSkeleton(false);
-	}, 2000);
 
 	return (
 		<>
+			<Header />
 			{loadingSkeleton ? (
 				<Loader />
 			) : (
 				<>
-					<Header />
 					<Routes>
 						<Route path="/" element={<Home />} />
-						<Route path="about" element={<About />} />
+						{/* <Route path="about" element={<About />} /> */}
 						<Route path="contact" element={<Contact />} />
 						<Route path="question" element={<Question />} />
 						<Route path="projects" element={<Projects />} />
 						<Route path="project_desc" element={<ProjectDesc />} />
 						<Route path="team" element={<Team />} />
 					</Routes>
-					<Footer />
 				</>
 			)}
+			{/* you can use progress spinner like that but it not preferable */}
+			{progress ? <div className="loading">loading....</div> : <About />}
+			<Footer />
 		</>
 	);
 }
