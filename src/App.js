@@ -27,7 +27,6 @@ function App() {
 		setProgress(true);
 		setTimeout(() => {
 			setProgress(false);
-			setLoadingSkeleton(false);
 		}, 1000);
 	}
 
@@ -42,6 +41,10 @@ function App() {
 	// skeleton use
 	const [loadingSkeleton, setLoadingSkeleton] = useState(true);
 
+	setTimeout(() => {
+		setLoadingSkeleton(false);
+	}, 1000);
+
 	return (
 		<>
 			<Header />
@@ -51,7 +54,7 @@ function App() {
 				<>
 					<Routes>
 						<Route path="/" element={<Home />} />
-						{/* <Route path="about" element={<About />} /> */}
+						<Route path="about" element={<About />} />
 						<Route path="contact" element={<Contact />} />
 						<Route path="question" element={<Question />} />
 						<Route path="projects" element={<Projects />} />
@@ -60,8 +63,6 @@ function App() {
 					</Routes>
 				</>
 			)}
-			{/* you can use progress spinner like that but it not preferable */}
-			{progress ? <div className="loading">loading....</div> : <About />}
 			<Footer />
 		</>
 	);
