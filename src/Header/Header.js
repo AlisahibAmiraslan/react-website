@@ -45,22 +45,34 @@ function Header() {
 					</div>
 					<ul className="flex justify-end items-center nav-ul">
 						<li className="menu">
-							<Link to="/">AnaSayfa</Link>
+							<Link to="/" onClick={menuClose}>
+								AnaSayfa
+							</Link>
 						</li>
 						<li className="menu">
-							<Link to="/about">Hakkımızda</Link>
+							<Link to="/about" onClick={menuClose}>
+								Hakkımızda
+							</Link>
 						</li>
 						<li className="menu">
-							<Link to="/projects">Projeler</Link>
+							<Link to="/projects" onClick={menuClose}>
+								Projeler
+							</Link>
 						</li>
 						<li className="menu">
-							<Link to="/question">Sıkca Sorulan Sorular</Link>
+							<Link to="/question" onClick={menuClose}>
+								Sıkca Sorulan Sorular
+							</Link>
 						</li>
 						<li className="menu">
-							<Link to="/team">Ekibimiz</Link>
+							<Link to="/team" onClick={menuClose}>
+								Ekibimiz
+							</Link>
 						</li>
 						<li className="menu">
-							<Link to="/contact">İletişim</Link>
+							<Link to="/contact" onClick={menuClose}>
+								İletişim
+							</Link>
 						</li>
 						<li>
 							<a
